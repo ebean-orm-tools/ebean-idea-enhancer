@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '11.39'
+version '11.41.1'
 
 sourceCompatibility = 1.8
 
@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    compile 'io.ebean:ebean-agent:11.39.1'
+    compile 'io.ebean:ebean-agent:11.41.1'
     testCompile 'junit:junit:4.12'
 }
 
@@ -23,6 +23,6 @@ intellij {
 
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+      <em>11.41.1</em> - Refactor of the Ebean Idea plugin to use -javaagent VM option<br>
+      """
 }

@@ -14,6 +14,16 @@ class AgentJarFile {
 
   private static final Logger log = Logger.getInstance(AgentJarFile.class);
 
+  /**
+   * Return true if the agentPath exists as a file.
+   */
+  static boolean exists(String agentPath) {
+    return agentPath != null && new File(agentPath).exists();
+  }
+
+  /**
+   * Find the ebean-agent jar file to use.
+   */
   static File find(String currentAgentPath) {
 
     File userEbeanDir = userHomeEbeanDirectory();
@@ -31,13 +41,19 @@ class AgentJarFile {
       return new File(currentAgentPath);
     }
 
+    return findPluginAgent();
+  }
+
+  /**
+   * Return the ebean-agent jar file in the plugin directory.
+   */
+  @Nullable
+  private static File findPluginAgent() {
     File pluginLib = new File(new File(PathManager.getPluginsPath()), "ebean-idea/lib");
     if (!pluginLib.exists()) {
-      log.warn("Directory does not exist config/plugins/ebean-idea/lib ? at absolute: " + pluginLib.getAbsolutePath());
+      log.error("Directory does not exist config/plugins/ebean-idea/lib ? at absolute: " + pluginLib.getAbsolutePath());
       return null;
     }
-
-    log.debug("Looking for ebean-agent jar in plugin lib directory: " + pluginLib);
     return findInDirectory(pluginLib);
   }
 
@@ -60,15 +76,7 @@ class AgentJarFile {
         }
       }
     }
-
     return null;
   }
 
-  /**
-   * Return true if the agentPath exists as a file.
-   */
-  static boolean exists(String agentPath) {
-
-    return agentPath != null && new File(agentPath).exists();
-  }
 }

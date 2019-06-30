@@ -23,17 +23,36 @@ public class AgentRunConfigurationExtension extends RunConfigurationExtension {
 
     if (state != null && state.enabled) {
       if (AgentJarFile.exists(state.agentPath)) {
-        // we have enabled the plugin, add the agent
-        log.info("using Ebean javaagent "+state.agentPath);
-        params.getVMParametersList().addParametersString("-javaagent:\""+state.agentPath+"\"");
+        runVmWithJavaAgent(params, state.agentPath);
+
+      } else {
+        log.info("Ebean agentPath not set? Finding ebean-agent.jar ...");
+        final StateComponent stateComponent = StateComponent.get(project);
+        final String agentPath = stateComponent.updateAgentPath();
+        if (agentPath != null) {
+          runVmWithJavaAgent(params, agentPath);
+        } else {
+          log.error("ebean-agent not set or found? agentPath:" + state.agentPath);
+        }
       }
     }
+  }
+
+  /**
+   * Add the -javaagent VM argument to run with the ebean-agent.
+   */
+  private void runVmWithJavaAgent(JavaParameters params, String agentPath) {
+    log.info("using Ebean javaagent " + agentPath);
+    params.getVMParametersList().addParametersString("-javaagent:\"" + agentPath + "\"");
   }
 
   @Override
   public boolean isApplicableFor(@NotNull RunConfigurationBase<?> configuration) {
 
-    Project project = configuration.getProject();
+    return isEnabled(configuration.getProject());
+  }
+
+  private boolean isEnabled(Project project) {
     PluginState state = project.getUserData(STATE_KEY);
     return state != null && state.enabled;
   }

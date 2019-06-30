@@ -1,17 +1,19 @@
 <idea-plugin>
-    <id>io.ebean11.enhancer</id>
-    <name>Ebean 11.x (v2) enhancer</name>
+    <id>org.avaje.ebean11.enhancer</id>
+    <name>Ebean 11 enhancer</name>
     <vendor url="http://ebean.io/">Rob Bygrave</vendor>
 
     <description><![CDATA[
     Ebean 11 enhancement<br>
-    <em>11.39.1</em> ebean-agent
+    Uses ebean-agent to perform Ebean enhancement for
+    entities, @Transactional and query beans.
     ]]></description>
 
     <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <runConfigurationExtension id="ebeanAgent" implementation="io.ebean.tool.ideaagent.AgentRunConfigurationExtension"/>
+        <projectConfigurable groupId="root" displayName="Ebean plugin" id="settings.io.ebean.enhancement" instance="io.ebean.tool.ideaagent.ProjectSettingsConfig"/>
     </extensions>
 
     <project-components>
@@ -23,8 +25,8 @@
 
     <actions>
         <action class="io.ebean.tool.ideaagent.ToggleAction"
-                text="Ebean (v2) 11.x Enhancement"
-                description="Ebean (v2) 11.x enhancement - https://ebean.io/"
+                text="Ebean 11 Enhancement"
+                description="Ebean ORM enhancement using javaagent - https://ebean.io/"
                 id="ebean11.plugin2.ToggleAction">
             <add-to-group anchor="after" group-id="BuildMenu" relative-to-action="Compile"/>
             <add-to-group anchor="after" group-id="ProjectViewPopupMenu" relative-to-action="Compile"/>
