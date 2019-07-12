@@ -1,12 +1,39 @@
 <idea-plugin>
     <id>org.avaje.ebean11.enhancer</id>
     <name>Ebean 11 enhancer</name>
-    <vendor url="http://ebean.io/">Rob Bygrave</vendor>
+    <vendor url="http://ebean.io/">Ebean</vendor>
 
     <description><![CDATA[
-    Ebean 11 enhancement<br>
-    Uses ebean-agent to perform Ebean enhancement for
-    entities, @Transactional and query beans.
+    <h3>Ebean 11 enhancement</h3>
+    <p>
+        Uses ebean-agent to perform Ebean enhancement for
+        entities, @Transactional and query beans.
+    </p>
+    <p>&nbsp;</p>
+
+    <h3>Enable per project</h3>
+    <table width="100%">
+    <tr>
+      <td width="200px" valign="top">
+        Enabled per project via <b>Build</b> menu
+      </td>
+      <td>
+        <p><img src="https://ebean.io/images/ebean-idea-build.png"></p>
+        <p>&nbsp;</p>
+      </td>
+    </tr>
+    <tr>
+      <td width="200px" valign="top">
+        Or enable via <b>File | Settings | Ebean plugin</b>.
+      </td>
+      <td>
+        <p><img src="https://ebean.io/images/ebean-idea-settings-600.png"></p>
+      </td>
+    </tr>
+    </table>
+    <p>
+       &nbsp;
+    </p>
     ]]></description>
 
     <depends>com.intellij.modules.java</depends>
