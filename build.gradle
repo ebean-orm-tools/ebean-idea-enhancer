@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '11.41.2'
+version '11.41.3'
 
 sourceCompatibility = 1.8
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compile 'io.ebean:ebean-agent:11.41.2'
+    compile 'io.ebean:ebean-agent:11.41.3'
     testCompile 'junit:junit:4.12'
 }
 
@@ -24,6 +24,7 @@ intellij {
 
 patchPluginXml {
     changeNotes """
+      <em>11.41.3</em> - Agent fix for #121 Extra output to sys out<br>
       <em>11.41.2</em> - Agent fix for #119 VerifyError with Java 11 and Builder pattern<br>
       <em>11.41.1</em> - Refactor of the Ebean Idea plugin to use -javaagent VM option<br>
       """
