@@ -28,11 +28,15 @@ public class AgentRunConfigurationExtension extends RunConfigurationExtension {
       } else {
         log.info("Ebean agentPath not set? Finding ebean-agent.jar ...");
         final StateComponent stateComponent = StateComponent.get(project);
-        final String agentPath = stateComponent.updateAgentPath();
-        if (agentPath != null) {
-          runVmWithJavaAgent(params, agentPath);
+        if (stateComponent == null) {
+          log.warn("no stateComponent - maybe no project?");
         } else {
-          log.error("ebean-agent not set or found? agentPath:" + state.agentPath);
+          final String agentPath = stateComponent.updateAgentPath();
+          if (agentPath != null) {
+            runVmWithJavaAgent(params, agentPath);
+          } else {
+            log.error("ebean-agent not set or found? agentPath:" + state.agentPath);
+          }
         }
       }
     }

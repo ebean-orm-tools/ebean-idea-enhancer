@@ -58,7 +58,9 @@ public class ProjectSettingsConfig implements SearchableConfigurable {
   @Override
   public void apply() {
     final StateComponent state = StateComponent.get(project);
-    state.updateEnabled(agentEnabled.isSelected());
+    if (state != null) {
+      state.updateEnabled(agentEnabled.isSelected());
+    }
   }
 
   @Override

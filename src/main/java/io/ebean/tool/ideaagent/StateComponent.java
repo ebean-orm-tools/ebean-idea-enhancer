@@ -20,7 +20,7 @@ import java.io.File;
 public class StateComponent implements ProjectComponent, PersistentStateComponent<PluginState> {
 
   static StateComponent get(Project project) {
-    return project.getComponent(StateComponent.class);
+    return project == null ? null : project.getComponent(StateComponent.class);
   }
 
   private final Logger log = Logger.getInstance(ToggleAction.class);
