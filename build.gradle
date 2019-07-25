@@ -24,6 +24,7 @@ intellij {
 
 patchPluginXml {
     sinceBuild '161'
+    untilBuild ''
     changeNotes """
       <em>11.41.4</em> - Add missing since-build 161 attribute<br>
       <em>11.41.3</em> - Agent fix for #121 Extra output to sys out<br>
