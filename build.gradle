@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '11.41.4'
+version '11.42.2'
 
 sourceCompatibility = 1.8
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compile 'io.ebean:ebean-agent:11.41.3'
+    compile 'io.ebean:ebean-agent:11.42.2'
     testCompile 'junit:junit:4.12'
 }
 
@@ -26,6 +26,7 @@ patchPluginXml {
     sinceBuild '161'
     untilBuild ''
     changeNotes """
+      <em>11.42.2</em> - Fix for Mockito v3 mock of entity beans<br>
       <em>11.41.4</em> - Add missing since-build 161 attribute<br>
       <em>11.41.3</em> - Agent fix for #121 Extra output to sys out<br>
       <em>11.41.2</em> - Agent fix for #119 VerifyError with Java 11 and Builder pattern<br>
