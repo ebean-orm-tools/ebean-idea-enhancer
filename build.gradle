@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '11.44.1'
+version '12.1.5'
 
 sourceCompatibility = 1.8
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compile 'io.ebean:ebean-agent:11.44.1'
+    compile 'io.ebean:ebean-agent:12.1.5'
     testCompile 'junit:junit:4.12'
 }
 
@@ -26,6 +26,7 @@ patchPluginXml {
     sinceBuild '161'
     untilBuild ''
     changeNotes """
+      <em>12.1.5</em> - Lazy init @DbArray collections<br>
       <em>11.44.1</em> - Support use of "top-packages"<br>
       <em>11.43.2</em> - Support Kotlin query bean FetchGroups<br>
       <em>11.42.4</em> - Fix for profile location query bean issue<br>
