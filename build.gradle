@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '12.1.8'
+version '12.1.12'
 
 sourceCompatibility = 1.8
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compile 'io.ebean:ebean-agent:12.1.8'
+    compile 'io.ebean:ebean-agent:12.1.12'
     testCompile 'junit:junit:4.12'
 }
 
@@ -26,6 +26,7 @@ patchPluginXml {
     sinceBuild '161'
     untilBuild ''
     changeNotes """
+      <em>12.1.12</em> - Update ASM, profile location default on<br>
       <em>12.1.8</em> - Support META-INF/ebean-generated-info.mf<br>
       <em>12.1.6</em> - Ignore bsh/Interpret due to JSR/RET<br>
       <em>12.1.5</em> - Lazy init @DbArray collections<br>
