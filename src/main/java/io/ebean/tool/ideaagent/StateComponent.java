@@ -1,7 +1,7 @@
 package io.ebean.tool.ideaagent;
 
+import com.intellij.openapi.components.NamedComponent;
 import com.intellij.openapi.components.PersistentStateComponent;
-import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
 import com.intellij.openapi.diagnostic.Logger;
@@ -17,7 +17,7 @@ import java.io.File;
  * Maintains the per project activate flag.
  */
 @State(name = "ebeanPlugin11", storages = {@Storage("ebean-plugin.xml")})
-public class StateComponent implements ProjectComponent, PersistentStateComponent<PluginState> {
+public class StateComponent implements NamedComponent, PersistentStateComponent<PluginState> {
 
   static StateComponent get(Project project) {
     return project == null ? null : project.getComponent(StateComponent.class);
@@ -39,23 +39,6 @@ public class StateComponent implements ProjectComponent, PersistentStateComponen
   @NotNull
   public String getComponentName() {
     return "Ebean11Action";
-  }
-
-  @Override
-  public void initComponent() {
-  }
-
-  @Override
-  public void disposeComponent() {
-  }
-
-  @Override
-  public void projectOpened() {
-  }
-
-  @Override
-  public void projectClosed() {
-    //setEnabledAndStore(false);
   }
 
   boolean isEnabled() {
