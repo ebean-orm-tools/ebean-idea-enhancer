@@ -1,10 +1,10 @@
 <idea-plugin>
     <id>org.avaje.ebean11.enhancer</id>
-    <name>Ebean 11 enhancer</name>
+    <name>Ebean enhancer</name>
     <vendor url="http://ebean.io/">Ebean</vendor>
 
     <description><![CDATA[
-    <h3>Ebean 11 enhancement</h3>
+    <h3>Ebean enhancement</h3>
     <p>
         Uses ebean-agent to perform Ebean enhancement for
         entities, @Transactional and query beans.
@@ -52,7 +52,7 @@
 
     <actions>
         <action class="io.ebean.tool.ideaagent.ToggleAction"
-                text="Ebean 11 Enhancement"
+                text="Ebean enhancement"
                 description="Ebean ORM enhancement using javaagent - https://ebean.io/"
                 id="ebean11.plugin2.ToggleAction">
             <add-to-group anchor="after" group-id="BuildMenu" relative-to-action="Compile"/>
