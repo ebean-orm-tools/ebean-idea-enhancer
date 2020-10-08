@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '12.3.6'
+version '12.4.3'
 
 sourceCompatibility = 1.8
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compile 'io.ebean:ebean-agent:12.3.6'
+    compile 'io.ebean:ebean-agent:12.4.3'
     testCompile 'junit:junit:4.12'
 }
 
@@ -26,10 +26,11 @@ patchPluginXml {
     sinceBuild '161'
     untilBuild ''
     changeNotes """
+      <em>12.4.3</em> - Update to ASM 9.0<br>
       <em>12.3.6</em> - Improve menu name<br>
       <em>12.3.4</em> - Fix to ignore JSR/RET IllegalArgumentException<br>
       <em>12.3.2</em> - Bump agent with Java 14 ASM 8.0.1<br>
-      <em>12.2.2</em> - Bump agent with Serializatio NPE fix<br>
+      <em>12.2.2</em> - Bump agent with Serialization NPE fix<br>
       <em>12.1.14</em> - Bump agent with SummaryInfo fix<br>
       <em>12.1.12</em> - Update ASM, profile location default on<br>
       <em>12.1.8</em> - Support META-INF/ebean-generated-info.mf<br>
