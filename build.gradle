@@ -20,10 +20,11 @@ dependencies {
 
 intellij {
     version '2019.1.3'
+    // version '2020.2.4' plugins = ['java']
 }
 
 patchPluginXml {
-    sinceBuild '161'
+    sinceBuild '171'
     untilBuild ''
     changeNotes """
       <em>12.8.2</em> - Bump agent with autoPersistUpdates support<br>
