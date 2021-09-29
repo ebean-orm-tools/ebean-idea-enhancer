@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '12.11.2'
+version '12.12.0'
 
 sourceCompatibility = 1.8
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compile 'io.ebean:ebean-agent:12.11.2'
+    compile 'io.ebean:ebean-agent:12.12.0'
     testCompile 'junit:junit:4.13.2'
 }
 
@@ -27,6 +27,7 @@ patchPluginXml {
     sinceBuild '171'
     untilBuild ''
     changeNotes """
+      <em>12.12.0</em> - Support ebean-agent min version check<br>
       <em>12.11.2</em> - Fix ModifyListenMode on relations with OrderBy<br>
       <em>12.11.0</em> - Improve Mockito mocking entity beans<br>
       <em>12.10.0</em> - NPE MappedSuperclass with no properties and named database<br>
