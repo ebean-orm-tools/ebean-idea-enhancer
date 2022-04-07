@@ -47,7 +47,6 @@
     <project-components>
         <component>
             <implementation-class>io.ebean.tool.ideaagent.StateComponent</implementation-class>
-            <option name="workspace" value="true"/>
         </component>
     </project-components>
 
