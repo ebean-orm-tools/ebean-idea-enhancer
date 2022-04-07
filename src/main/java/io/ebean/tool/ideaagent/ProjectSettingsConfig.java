@@ -12,8 +12,7 @@ public class ProjectSettingsConfig implements SearchableConfigurable {
 
   private JCheckBox agentEnabled;
   private JPanel topPanel;
-
-  private Project project;
+  private final Project project;
 
   ProjectSettingsConfig(@NotNull Project project) {
     this.project = project;

@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '12.12.1'
+version '13.1.0'
 
 sourceCompatibility = 1.8
 
@@ -14,19 +14,20 @@ repositories {
 }
 
 dependencies {
-    compile 'io.ebean:ebean-agent:12.12.1'
+    compile 'io.ebean:ebean-agent:13.1.0'
     testCompile 'junit:junit:4.13.2'
 }
 
 intellij {
     version '2019.1.3'
-    // version '2020.2.4' plugins = ['java']
+    //version '2020.2.4' plugins = ['java']
 }
 
 patchPluginXml {
     sinceBuild '171'
     untilBuild ''
     changeNotes """
+      <em>13.1.0</em> - ASM 9.3 with Java 19 support<br>
       <em>12.12.1</em> - Fix kotlin collection initialisation<br>
       <em>12.12.0</em> - Support ebean-agent min version check<br>
       <em>12.11.2</em> - Fix ModifyListenMode on relations with OrderBy<br>
