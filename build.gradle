@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '13.1.1'
+version '13.3.0'
 
 sourceCompatibility = 1.8
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compile 'io.ebean:ebean-agent:13.1.0'
+    compile 'io.ebean:ebean-agent:13.3.0'
     testCompile 'junit:junit:4.13.2'
 }
 
@@ -27,6 +27,7 @@ patchPluginXml {
     sinceBuild '171'
     untilBuild ''
     changeNotes """
+      <em>13.3.0</em> - Provide default toString() for entities<br>
       <em>13.1.0</em> - ASM 9.3 with Java 19 support<br>
       <em>12.12.1</em> - Fix kotlin collection initialisation<br>
       <em>12.12.0</em> - Support ebean-agent min version check<br>
