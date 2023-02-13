@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.7.3'
+    id 'org.jetbrains.intellij' version '1.6.0'
 }
 
 group 'io.ebean.tools'
@@ -19,14 +19,14 @@ dependencies {
 }
 
 intellij {
-    version '2019.1.3'
+    version = '2019.1.3'
     //version '2020.2.4' plugins = ['java']
 }
 
 patchPluginXml {
-    sinceBuild '171'
-    untilBuild ''
-    changeNotes """
+    sinceBuild = '171'
+    untilBuild = ''
+    changeNotes = """
       <em>13.12.0</em> - Default support @DbArray nullable and @Transient initialisation<br>
       <em>13.10.0</em> - Support for entity-field-access, allow-nullable-dbarray<br>
       <em>13.6.1</em> - Enhance play subpackages, ignore io.opentelemetry<br>
