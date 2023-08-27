@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '13.20.0'
+version '13.22.0'
 
 sourceCompatibility = 1.8
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.ebean:ebean-agent:13.20.0'
+    implementation 'io.ebean:ebean-agent:13.22.0'
     testImplementation 'junit:junit:4.13.2'
 }
 
@@ -27,6 +27,7 @@ patchPluginXml {
     sinceBuild = '191'
     untilBuild = ''
     changeNotes = """
+      <em>13.22.0</em> - Support changes to query beans<br>
       <em>13.20.0</em> - Suppress warnings for MacOS AWT types<br>
       <em>13.17.0</em> - Update to ASM 9.5<br>
       <em>13.14.0</em> - Support refactoring of QueryBeans<br>
