@@ -19,12 +19,13 @@ dependencies {
 }
 
 intellij {
-    version = '2019.1.3'
+    version = '2020.2.4'
+    plugins = ['java']
     //version '2020.2.4' plugins = ['java']
 }
 
 patchPluginXml {
-    sinceBuild = '191'
+    sinceBuild = '202'
     untilBuild = ''
     changeNotes = """
       <em>13.22.0</em> - Support changes to query beans<br>
