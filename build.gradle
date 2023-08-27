@@ -1,10 +1,10 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '1.6.0'
+    id 'org.jetbrains.intellij' version '1.13.3'
 }
 
 group 'io.ebean.tools'
-version '13.14.0'
+version '13.20.0'
 
 sourceCompatibility = 1.8
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.ebean:ebean-agent:13.14.0'
+    implementation 'io.ebean:ebean-agent:13.20.0'
     testImplementation 'junit:junit:4.13.2'
 }
 
@@ -24,9 +24,11 @@ intellij {
 }
 
 patchPluginXml {
-    sinceBuild = '171'
+    sinceBuild = '191'
     untilBuild = ''
     changeNotes = """
+      <em>13.20.0</em> - Suppress warnings for MacOS AWT types<br>
+      <em>13.17.0</em> - Update to ASM 9.5<br>
       <em>13.14.0</em> - Support refactoring of QueryBeans<br>
       <em>13.12.0</em> - Default support @DbArray nullable and @Transient initialisation<br>
       <em>13.10.0</em> - Support for entity-field-access, allow-nullable-dbarray<br>
