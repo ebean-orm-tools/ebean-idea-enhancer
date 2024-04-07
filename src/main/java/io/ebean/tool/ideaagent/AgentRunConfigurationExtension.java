@@ -16,7 +16,7 @@ public class AgentRunConfigurationExtension extends RunConfigurationExtension {
   private static final Logger log = Logger.getInstance(AgentRunConfigurationExtension.class);
 
   @Override
-  public <T extends RunConfigurationBase> void updateJavaParameters(T configuration, JavaParameters params, RunnerSettings runnerSettings) throws ExecutionException {
+  public <T extends RunConfigurationBase<?>> void updateJavaParameters(@NotNull T configuration, @NotNull JavaParameters params, RunnerSettings runnerSettings) throws ExecutionException {
 
     Project project = configuration.getProject();
     PluginState state = project.getUserData(STATE_KEY);

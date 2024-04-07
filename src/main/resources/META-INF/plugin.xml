@@ -37,7 +37,7 @@
     ]]></description>
 
     <depends>com.intellij.modules.java</depends>
-    <idea-version since-build="171" />
+    <idea-version since-build="223" />
 
     <extensions defaultExtensionNs="com.intellij">
         <runConfigurationExtension id="ebeanAgent" implementation="io.ebean.tool.ideaagent.AgentRunConfigurationExtension"/>

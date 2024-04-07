@@ -4,9 +4,9 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '14.2.0'
+version '14.2.1'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 17    //version '2020.2.4' plugins = ['java']
 
 repositories {
     mavenLocal()
@@ -19,15 +19,15 @@ dependencies {
 }
 
 intellij {
-    version = '2020.2.4'
+    version = '2022.3.3'
     plugins = ['java']
-    //version '2020.2.4' plugins = ['java']
 }
 
 patchPluginXml {
-    sinceBuild = '202'
+    sinceBuild = '223'
     untilBuild = ''
     changeNotes = """
+      <em>14.2.1</em> - Make compatible with IDEA 2024.1<br>
       <em>14.2.0</em> - Support QueryBean change<br>
       <em>13.26.0</em> - Support SequencedSet<br>
       <em>13.22.0</em> - Support changes to query beans<br>
