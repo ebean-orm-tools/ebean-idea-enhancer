@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '14.2.1'
+version '15.3.0'
 
 sourceCompatibility = 17    //version '2020.2.4' plugins = ['java']
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.ebean:ebean-agent:14.2.0'
+    implementation 'io.ebean:ebean-agent:15.3.0'
     testImplementation 'junit:junit:4.13.2'
 }
 
@@ -27,6 +27,7 @@ patchPluginXml {
     sinceBuild = '223'
     untilBuild = ''
     changeNotes = """
+      <em>15.3.0</em> - Fix for generic signature<br>
       <em>14.2.1</em> - Make compatible with IDEA 2024.1<br>
       <em>14.2.0</em> - Support QueryBean change<br>
       <em>13.26.0</em> - Support SequencedSet<br>
