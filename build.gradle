@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '15.6.0'
+version '15.7.0'
 
 sourceCompatibility = 17    //version '2020.2.4' plugins = ['java']
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.ebean:ebean-agent:15.6.0'
+    implementation 'io.ebean:ebean-agent:15.7.0'
     testImplementation 'junit:junit:4.13.2'
 }
 
@@ -27,6 +27,7 @@ patchPluginXml {
     sinceBuild = '223'
     untilBuild = ''
     changeNotes = """
+      <em>15.7.0</em> - Update to ASM 9.7.1, Java 24 support<br>
       <em>15.6.0</em> - Support improved query beans<br>
       <em>15.5.0</em> - Update to ASM 9.7, Java 22 support<br>
       <em>15.3.0</em> - Fix for generic signature<br>
