@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '15.8.0'
+version '15.9.0'
 
 sourceCompatibility = 17    //version '2020.2.4' plugins = ['java']
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.ebean:ebean-agent:15.8.0'
+    implementation 'io.ebean:ebean-agent:15.9.0'
     testImplementation 'junit:junit:4.13.2'
 }
 
@@ -27,6 +27,7 @@ patchPluginXml {
     sinceBuild = '223'
     untilBuild = ''
     changeNotes = """
+      <em>15.9.0</em> - Support module path for transactional<br>
       <em>15.8.0</em> - Support fluid QueryBuilders<br>
       <em>15.7.0</em> - Update to ASM 9.7.1, Java 24 support<br>
       <em>15.6.0</em> - Support improved query beans<br>
