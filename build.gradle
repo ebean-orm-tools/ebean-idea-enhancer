@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.ebean.tools'
-version '15.12.0'
+version '16.1.0'
 
 sourceCompatibility = 17    //version '2020.2.4' plugins = ['java']
 
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.ebean:ebean-agent:15.12.0'
+    implementation 'io.ebean:ebean-agent:16.1.0'
     testImplementation 'junit:junit:4.13.2'
 }
 
@@ -27,6 +27,7 @@ patchPluginXml {
     sinceBuild = '223'
     untilBuild = ''
     changeNotes = """
+      <em>16.1.0</em> - Support Java 25<br>
       <em>15.12.0</em> - Support Lombok SuperBuilder<br>
       <em>15.10.0</em> - Detect invalid OneToMany initialisation<br>
       <em>15.9.0</em> - Support module path for transactional<br>
